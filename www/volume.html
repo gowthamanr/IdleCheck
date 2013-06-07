@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+    </head>
+    <body onload="onload();">
+        
+        <script type="text/javascript" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" charset="utf-8" src="VolumeSlider.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+            
+            function onload()
+            {
+                document.addEventListener("deviceready",onDeviceReady,true);
+            }
+            
+            function onDeviceReady()
+            {
+                var volumeSlider = window.plugins.volumeSlider;
+                volumeSlider.createVolumeSlider(250,450,300,30); // origin x, origin y, width, height
+                volumeSlider.showVolumeSlider();
+            }
+            
+            </script>
+        
+        <video width="520" height="300" controls="controls" style="position: absolute; left:150px; top: 20px ;">
+            <source src="Baby.mp4" type="video/mp4">
+                
+                </video>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        
+    </body>
+  <input type="button"  value="Home" style="width:100px;height:40px; font-face: 'Verdana'; color:teal; font-size:20px; position: absolute; " onclick="window.location.href='index.html' "/>
+    
+</html>

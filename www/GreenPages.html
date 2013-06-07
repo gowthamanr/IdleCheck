@@ -1,0 +1,42 @@
+<html>
+    <head><center><h1>Time Out</h1></center> </head>
+     <body>
+        <script type="text/javascript">
+            
+            var t;
+            function Redirect()
+            {
+                window.location.href="index.html";
+            }
+            
+            document.write("You will be redirected to main page in 5 sec.");
+            t=setTimeout('Redirect()', 10000);
+           // clearTimeout(t);
+        
+//            (function($){
+//             var timer;
+//             
+//             var timeout = 120000;
+//             var myTimeOut = 60000;
+//             $(document).bind("idle.idleTimer", function(){
+//                              
+//                              timer = window.setTimeout(function()
+//                              {
+//                                 window.location.href = "index.html";},myTimeOut);
+//                              });
+//             $(document).bind("active.idleTimer", function(){
+//                              timeout = 120000;
+//                              window.clearTimeout(timer);
+//                              });
+//             $.idleTimer(timeout);
+//             })(jQuery);
+            
+            </script>
+       <br><br><br>
+    
+      <a href="index.html">HOME</a>
+    
+    <iframe  frameborder="0" width="100" height="50" style="left=50 top=250;" src="http://www.apple.com">
+    </iframe>
+    </body>
+</html>
